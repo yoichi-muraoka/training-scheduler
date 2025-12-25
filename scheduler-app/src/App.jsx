@@ -1,10 +1,10 @@
-import { Routes, Route, Link } from "react-router/dom";
+import { Routes, Route, Link } from "react-router-dom";
 import CoursesPage from "./pages/CoursesPage";
 
 function App() {
   return (
     <div>
-      aaa
+      <h1>研修スケジュール管理システム</h1>
       <header style={{ padding: 16 }}>
         <nav>
           <Link to="/">Home</Link> | <Link to="/courses">Courses</Link>

@@ -1,6 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
 import api from '../lib/api'
-import { Box, Heading, List, ListItem, Spinner, Text } from '@chakra-ui/react'
 
 async function fetchCourses() {
   const res = await api.get('/courses')
@@ -10,24 +9,24 @@ async function fetchCourses() {
 export default function CoursesPage() {
   const { data, isLoading, error } = useQuery({ queryKey: ['courses'], queryFn: fetchCourses })
 
-  if (isLoading) return <Spinner />
-  if (error) return <Text color="red.500">Error loading courses</Text>
+  if (isLoading) return <div>Loading...</div>
+  if (error) return <div style={{ color: 'red' }}>Error loading courses</div>
 
   return (
-    <Box>
-      <Heading size="md" mb={4}>Courses</Heading>
-      <List spacing={3}>
+    <div>
+      <h2>Courses</h2>
+      <ul>
         {data && data.length ? (
           data.map((c) => (
-            <ListItem key={c.id}>
-              <Text fontWeight="bold">{c.title}</Text>
-              <Text fontSize="sm">{c.description}</Text>
-            </ListItem>
+            <li key={c.id} style={{ marginBottom: 12 }}>
+              <div style={{ fontWeight: 'bold' }}>{c.title}</div>
+              <div style={{ fontSize: 14 }}>{c.description}</div>
+            </li>
           ))
         ) : (
-          <ListItem>No courses</ListItem>
+          <li>No courses</li>
         )}
-      </List>
-    </Box>
+      </ul>
+    </div>
   )
 }
