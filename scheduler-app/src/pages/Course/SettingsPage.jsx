@@ -1,4 +1,5 @@
 import { Box, Heading, Input, Textarea, Button, Text } from '@chakra-ui/react'
+import CourseNav from '../../components/layout/CourseNav'
 import { useParams } from 'react-router-dom'
 
 export default function SettingsPage() {
@@ -7,6 +8,7 @@ export default function SettingsPage() {
   return (
     <Box>
       <Heading size="lg" mb={4}>講座設定（ID: {id}）</Heading>
+      <CourseNav />
       <Box mb={3}>
         <Text mb={1}>講座名</Text>
         <Input placeholder="講座名を入力" />

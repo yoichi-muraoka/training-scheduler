@@ -1,5 +1,6 @@
 import { Box, Heading, VStack, Input, Button, HStack, Text } from '@chakra-ui/react'
 import { useParams } from 'react-router-dom'
+import CourseNav from '../../components/layout/CourseNav'
 
 export default function CategoriesPage() {
   const { id } = useParams()
@@ -11,6 +12,7 @@ export default function CategoriesPage() {
   return (
     <Box>
       <Heading size="lg" mb={4}>講義区分管理（講座 {id}）</Heading>
+      <CourseNav />
       <VStack spacing={3} align="stretch">
         {sample.map((c) => (
           <HStack key={c.id} justifyContent="space-between">

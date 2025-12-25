@@ -1,5 +1,6 @@
 import { Box, Heading, VStack, Button, Text } from '@chakra-ui/react'
 import { useParams } from 'react-router-dom'
+import CourseNav from '../../components/layout/CourseNav'
 
 export default function DayBlocksPage() {
   const { id } = useParams()
@@ -7,6 +8,7 @@ export default function DayBlocksPage() {
   return (
     <Box>
       <Heading size="lg" mb={4}>1日ブロック管理（講座 {id}）</Heading>
+      <CourseNav />
       <VStack spacing={3} align="stretch">
         <Box p={3} borderWidth="1px" borderRadius="md">
           <Text>サンプルブロック: Javaプログラミング実習（講義数: 3）</Text>

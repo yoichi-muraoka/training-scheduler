@@ -1,5 +1,6 @@
 import { Box, Heading, VStack, Input, Textarea, Button, HStack, Text } from '@chakra-ui/react'
 import { useParams } from 'react-router-dom'
+import CourseNav from '../../components/layout/CourseNav'
 
 export default function LecturesPage() {
   const { id } = useParams()
@@ -11,6 +12,7 @@ export default function LecturesPage() {
   return (
     <Box>
       <Heading size="lg" mb={4}>講義マスタ（講座 {id}）</Heading>
+      <CourseNav />
       <VStack spacing={3} align="stretch">
         {sample.map((s) => (
           <Box key={s.id} p={3} borderWidth="1px" borderRadius="md">
