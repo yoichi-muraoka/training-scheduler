@@ -1,0 +1,120 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "courseName": "新人研修 Java 総合講座",
+      "fiscalYear": 2026,
+      "startDate": "2026-04-08",
+      "endDate": "2026-08-31",
+      "dailyTime": {
+        "start": "09:00",
+        "end": "18:00"
+      },
+      "notes": "※ カリキュラム内容は変更される場合がございます。",
+      "contact": "株式会社ジードライブ 教育事業部\nTEL: 03-1234-5678\nE-mail: info@zdrv.com",
+      "printHeaderLeft": "株式会社ジードライブ",
+      "printHeaderRight": "$_FISCAL_YEAR 年度 $_COURSE_NAME 講座スケジュール",
+      "printFooterLeft": "",
+      "printFooterRight": "$_PAGE / $TOTAL_PAGES",
+      "holidayPolicy": {
+        "skipWeekends": true,
+        "skipDates": [
+          "2026-04-29",
+          "2026-05-04",
+          "2026-05-05",
+          "2026-05-06",
+          "2026-07-20",
+          "2026-08-11",
+          "2026-08-12",
+          "2026-08-13",
+          "2026-08-14"
+        ]
+      }
+    }
+  ],
+
+  "holidays": [
+    { "id": 1, "courseId": 1, "date": "2026-04-29", "type": "holiday", "label": "昭和の日" },
+    { "id": 2, "courseId": 1, "date": "2026-05-04", "type": "holiday", "label": "みどりの日（振替）" },
+    { "id": 3, "courseId": 1, "date": "2026-05-05", "type": "holiday", "label": "こどもの日" },
+    { "id": 4, "courseId": 1, "date": "2026-05-06", "type": "holiday", "label": "振替休日" },
+    { "id": 5, "courseId": 1, "date": "2026-07-20", "type": "holiday", "label": "海の日" },
+    { "id": 6, "courseId": 1, "date": "2026-08-11", "type": "holiday", "label": "山の日" },
+    { "id": 7, "courseId": 1, "date": "2026-08-12", "type": "obon", "label": "お盆休み" },
+    { "id": 8, "courseId": 1, "date": "2026-08-13", "type": "obon", "label": "お盆休み" },
+    { "id": 9, "courseId": 1, "date": "2026-08-14", "type": "obon", "label": "お盆休み" },
+
+    { "id": 10, "courseId": 1, "date": "2026-06-01", "type": "special", "label": "臨時休講（例）" }
+  ],
+
+  "categories": [
+    { "id": 1, "courseId": 1, "name": "AI 活用実習" },
+    { "id": 2, "courseId": 1, "name": "IT 技術基礎" },
+    { "id": 3, "courseId": 1, "name": "Java プログラミング実習" },
+    { "id": 4, "courseId": 1, "name": "HTML/CSS 実習" },
+    { "id": 5, "courseId": 1, "name": "JavaScript 基礎実習" },
+    { "id": 6, "courseId": 1, "name": "Java フレームワーク基礎実習" },
+    { "id": 7, "courseId": 1, "name": "データベース実習" },
+    { "id": 8, "courseId": 1, "name": "Java フレームワーク応用実習" },
+    { "id": 9, "courseId": 1, "name": "Web システム開発演習" },
+    { "id": 10, "courseId": 1, "name": "React 実習" }
+  ],
+
+  "lectures": [
+    { "id": 1, "courseId": 1, "categoryId": 3, "name": "分岐処理 1", "detail": "if 文による条件分岐の基本" },
+    { "id": 2, "courseId": 1, "categoryId": 3, "name": "分岐処理 2", "detail": "switch 文による多分岐の基本" },
+    { "id": 3, "courseId": 1, "categoryId": 3, "name": "配列 1", "detail": "配列の基本操作と活用方法" },
+    { "id": 4, "courseId": 1, "categoryId": 3, "name": "反復処理 1", "detail": "for 文による反復処理の基本" },
+
+    { "id": 20, "courseId": 1, "categoryId": 10, "name": "React 概要", "detail": "React の基本概念と特徴の紹介" },
+    { "id": 21, "courseId": 1, "categoryId": 10, "name": "JSX とコンポーネント", "detail": "JSX の使い方とコンポーネントの基本" },
+    { "id": 22, "courseId": 1, "categoryId": 10, "name": "フック", "detail": "React フックの基本と使用方法" },
+    { "id": 101, "courseId": 1, "categoryId": 1, "name": "AI の基礎知識", "detail": "AI 関連の基本用語、対話型 AI サービス、AI 活用時の注意点" },
+    { "id": 102, "courseId": 1, "categoryId": 1, "name": "AI 活用入門", "detail": "プロンプトの基礎、コンテキストウィンドウ" }
+  ],
+
+  "dayBlocks": [
+    {
+      "id": 1,
+      "courseId": 1,
+      "title": "AI 活用実習①",
+      "categoryId": 1,
+      "categorySerial": 1,
+      "lectureItems": [
+        { "lectureId": 101, "label": "AI の基礎知識", "detail": "AI 関連の基本用語、対話型 AI サービス、AI 活用時の注意点" },
+        { "lectureId": 102, "label": "AI 活用入門", "detail": "プロンプトの基礎、コンテキストウィンドウ" }
+      ]
+    },
+    {
+      "id": 2,
+      "courseId": 1,
+      "title": "Java プログラミング実習①",
+      "categoryId": 3,
+      "categorySerial": 1,
+      "lectureItems": [
+        { "lectureId": 1 },
+        { "lectureId": 2 }
+      ]
+    },
+    {
+      "id": 3,
+      "courseId": 1,
+      "title": "React 実習①",
+      "categoryId": 10,
+      "categorySerial": 1,
+      "lectureItems": [
+        { "lectureId": 20 },
+        { "lectureId": 21 }
+      ]
+    }
+  ],
+
+  "scheduleItems": [
+    { "id": 1, "courseId": 1, "type": "section", "label": "基礎編", "order": 10 },
+    { "id": 2, "courseId": 1, "type": "dayBlock", "dayBlockId": 1, "order": 20 },
+    { "id": 3, "courseId": 1, "type": "dayBlock", "dayBlockId": 2, "order": 30 },
+
+    { "id": 100, "courseId": 1, "type": "section", "label": "応用編", "order": 1000 },
+    { "id": 101, "courseId": 1, "type": "dayBlock", "dayBlockId": 3, "order": 1010 }
+  ]
+}

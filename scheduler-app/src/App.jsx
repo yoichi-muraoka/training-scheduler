@@ -1,6 +1,12 @@
 import { Routes, Route, Link } from "react-router-dom";
-import CoursesPage from "./pages/CoursesPage";
-import { Heading, Container } from "@chakra-ui/react";
+import CoursesListPage from "./pages/Courses/CoursesListPage";
+import SettingsPage from "./pages/Course/SettingsPage";
+import CategoriesPage from "./pages/Course/CategoriesPage";
+import LecturesPage from "./pages/Course/LecturesPage";
+import DayBlocksPage from "./pages/Course/DayBlocksPage";
+import SchedulePage from "./pages/Course/SchedulePage";
+import PrintPage from "./pages/Course/PrintPage";
+import { Heading, Container, HStack, Button } from "@chakra-ui/react";
 
 function App() {
   return (
@@ -9,14 +15,21 @@ function App() {
         研修スケジュール管理システム
       </Heading>
       <header>
-        <nav>
-          <Link to="/">Home</Link> | <Link to="/courses">Courses</Link>
-        </nav>
+        <HStack spacing={4} mb={4}>
+          <Button as={Link} to="/">Home</Button>
+          <Button as={Link} to="/courses">講座一覧</Button>
+        </HStack>
       </header>
       <main>
         <Routes>
-          <Route path="/" element={<div>Welcome to Scheduler App</div>} />
-          <Route path="/courses" element={<CoursesPage />} />
+          <Route path="/" element={<div>アプリの使い方コンポーネントを配置</div>} />
+          <Route path="/courses" element={<CoursesListPage />} />
+          <Route path="/courses/:id/settings" element={<SettingsPage />} />
+          <Route path="/courses/:id/categories" element={<CategoriesPage />} />
+          <Route path="/courses/:id/lectures" element={<LecturesPage />} />
+          <Route path="/courses/:id/day-blocks" element={<DayBlocksPage />} />
+          <Route path="/courses/:id/schedule" element={<SchedulePage />} />
+          <Route path="/courses/:id/print" element={<PrintPage />} />
         </Routes>
       </main>
     </Container>
