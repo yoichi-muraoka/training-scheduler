@@ -7,7 +7,7 @@ export default function PrintPage() {
 
   return (
     <Box>
-      <Heading size="lg" mb={4}>印刷プレビュー（講座 {id}）</Heading>
+      <Heading size="xl" mb={4}>Javaプログラミング研修（講座ID: {id}）</Heading>
       <CourseNav />
       <Text mb={3}>ここでA4プレビューと印刷ボタンを表示します（モック）</Text>
       <Button onClick={() => window.print()}>印刷</Button>

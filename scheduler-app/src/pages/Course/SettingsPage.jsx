@@ -7,7 +7,7 @@ export default function SettingsPage() {
 
   return (
     <Box>
-      <Heading size="lg" mb={4}>講座設定（ID: {id}）</Heading>
+      <Heading size="xl" mb={4}>Javaプログラミング研修（講座ID: {id}）</Heading>
       <CourseNav />
       <Box mb={3}>
         <Text mb={1}>講座名</Text>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export default function CoursesListPage() {
   const sampleCourses = [
-    { id: 1, title: '新人研修 Java 総合', year: 2026, period: '2026-06-01 ~ 2026-08-31' },
+    { id: 1, title: 'Javaプログラミング研修', year: 2026, period: '2026-06-01 ~ 2026-08-31' },
     { id: 2, title: 'フロントエンド基礎', year: 2026, period: '2026-07-01 ~ 2026-07-30' },
   ]
 

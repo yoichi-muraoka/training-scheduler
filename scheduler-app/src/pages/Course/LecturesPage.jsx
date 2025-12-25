@@ -11,7 +11,7 @@ export default function LecturesPage() {
 
   return (
     <Box>
-      <Heading size="lg" mb={4}>講義マスタ（講座 {id}）</Heading>
+      <Heading size="xl" mb={4}>Javaプログラミング研修（講座ID: {id}）</Heading>
       <CourseNav />
       <VStack spacing={3} align="stretch">
         {sample.map((s) => (

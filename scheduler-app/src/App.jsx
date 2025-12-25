@@ -22,7 +22,7 @@ function App() {
       </header>
       <main>
         <Routes>
-          <Route path="/" element={<div>Welcome to Scheduler App</div>} />
+          <Route path="/" element={<div>アプリの使い方コンポーネントを配置</div>} />
           <Route path="/courses" element={<CoursesListPage />} />
           <Route path="/courses/:id/settings" element={<SettingsPage />} />
           <Route path="/courses/:id/categories" element={<CategoriesPage />} />

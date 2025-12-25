@@ -14,19 +14,31 @@ export default function CourseNav() {
     { to: `/courses/${id}/print`, label: '印刷' },
   ]
 
+  const isActive = (to) => {
+    const path = location.pathname
+    if (path === to) return true
+    // consider sub-routes active (e.g. /courses/1/settings/edit)
+    return path.startsWith(to + '/')
+  }
+
   return (
     <HStack spacing={2} mb={4}>
-      {items.map((it) => (
-        <Button
-          as={Link}
-          key={it.to}
-          to={it.to}
-          size="sm"
-          colorScheme={location.pathname === it.to ? 'blue' : 'gray'}
-        >
-          {it.label}
-        </Button>
-      ))}
+      {items.map((it) => {
+        const active = isActive(it.to)
+        return (
+          <Button
+            as={Link}
+            key={it.to}
+            to={it.to}
+            size="sm"
+            variant={active ? 'solid' : 'ghost'}
+            colorScheme={active ? 'blue' : 'gray'}
+            aria-current={active ? 'page' : undefined}
+          >
+            {it.label}
+          </Button>
+        )
+      })}
     </HStack>
   )
 }

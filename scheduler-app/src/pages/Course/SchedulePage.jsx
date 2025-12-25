@@ -7,7 +7,7 @@ export default function SchedulePage() {
 
   return (
     <Box>
-      <Heading size="lg" mb={4}>スケジュール管理（講座 {id}）</Heading>
+      <Heading size="xl" mb={4}>Javaプログラミング研修（講座ID: {id}）</Heading>
       <CourseNav />
       <VStack spacing={3} align="stretch">
         <Box p={3} borderWidth="1px" borderRadius="md">
