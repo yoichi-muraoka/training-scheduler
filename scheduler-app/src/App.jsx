@@ -1,35 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Routes, Route, Link } from "react-router-dom";
+import CoursesPage from "./pages/CoursesPage";
+import { Heading, Container } from "@chakra-ui/react";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Container py={5}>
+      <Heading as="h1" size="2xl" mb={4}>
+        研修スケジュール管理システム
+      </Heading>
+      <header>
+        <nav>
+          <Link to="/">Home</Link> | <Link to="/courses">Courses</Link>
+        </nav>
+      </header>
+      <main>
+        <Routes>
+          <Route path="/" element={<div>Welcome to Scheduler App</div>} />
+          <Route path="/courses" element={<CoursesPage />} />
+        </Routes>
+      </main>
+    </Container>
+  );
 }
 
-export default App
+export default App;
